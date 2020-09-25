@@ -1,0 +1,20 @@
+label{font-weight: 600;}
+input.form-control { 
+    font-weight: 200;
+    border:none;
+    border-radius: 0;
+    background: white;
+    border-bottom: 2px solid #d6d2ce;
+}
+input.btn-submit{
+    background-color: #ee7033;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 4rem;
+}
+form{
+    margin-bottom: 1rem;
+}
+.invalid-feedback {display: block;}

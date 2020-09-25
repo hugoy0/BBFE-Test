@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+            <div class="col-md-5">
+                <input class="form-control searchInput" [(ngModel)]="searchText" type="search" placeholder="Start typing to search...">
+            </div>
+            <div class="col-md-7">
+                <strong>Sort by </strong>
+
+                <button class="btn-sort" [ngClass]="{
+                    'asc': (step == 'transactionDate' && !desc),
+                    'desc': (step == 'transactionDate' && desc)
+                }" 
+                (click)="step='transactionDate';sortTable(step)">Date</button>
+                <button class="btn-sort" [ngClass]="{
+                    'asc': (step == 'merchant' && !desc),
+                    'desc': (step == 'merchant' && desc)
+                }" (click)="step='merchant';sortTable('merchant')">Benneficiary</button> 
+                
+                <button class="btn-sort" [ngClass]="{
+                    'asc': (step == 'amount' && !desc),
+                    'desc': (step == 'amount' && desc)
+                }" (click)="step='amount';sortTable('amount')">Amount</button>
+            </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <tr *ngFor="let transaction of transactionArray | filter:'merchant, transactionType': searchText" [ngStyle]="{'border-left': '10px solid' +  transaction.categoryCode}">
+                <td class="align-middle">{{ transaction.transactionDate | date: 'LLL, dd' }}</td>
+                <td class="align-middle"><img src="{{ transaction.merchantLogo }}" alt=""></td>
+                <td>
+                    <strong>{{ transaction.merchant }}</strong>
+                    <br>{{ transaction.transactionType }}
+                </td>
+                <td class="align-middle"><strong>- {{ transaction.amount | currency }}</strong></td>
+            </tr>
+        </table>
+    </div>
+</div>

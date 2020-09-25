@@ -1,0 +1,21 @@
+.navbar {
+    background-color: white;
+    border-bottom: 2px solid #ee7033;
+    padding: .9rem 0;
+}
+.container.main{margin: 5% auto;}
+.section-title{
+    background-color: #0c8397;
+    color: white;
+    font-weight: 200;
+}
+.section-title p {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.section-title fa-icon {float: left;}
+.content{background-color: white;}
+
+.divTransactions{min-height: 915px;}

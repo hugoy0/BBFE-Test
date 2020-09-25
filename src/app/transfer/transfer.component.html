@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-12">
+        <form novalidate [formGroup]="transferForm" (ngSubmit)="submitForm()">
+            <div class="form-group">
+                <label for="fromAccount">{{ labelFromAccount | uppercase }}</label>
+                <input class="form-control" type="text" disabled value="{{ fromAccount }} - {{ fromAmount | currency }}" required>
+            </div>
+            <div class="form-group">
+                <label for="merchant">{{ labelToAccount | uppercase }}</label>
+                <input class="form-control" type="text" placeholder="{{ placeholderToAccount }}" formControlName="merchant">
+                <div class="invalid-feedback" *ngIf="transferForm.get('merchant').hasError('required') && transferForm.get('merchant').touched" >
+                    Please provide a valid merchant name.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="amount">{{ labelAmount | uppercase }}</label>
+                <input class="form-control" type="text" placeholder="{{ placeholderAmount }}" formControlName="amount">
+                <div class="invalid-feedback" *ngIf="transferForm.get('amount').hasError('required') && transferForm.get('amount').touched && errAmount" >
+                    Please provide a valid amount maximum $500.
+                </div>
+            </div>
+            
+            <div class="col-md-9 offset-md-3">
+                <input type="submit" class="btn btn-lg btn-block btn-submit" value="Submit" [disabled]="transferForm.invalid" >
+            </div>
+        </form>
+    </div>
+</div>

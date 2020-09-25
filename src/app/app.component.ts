@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { faSync, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'myBank';
+  @Output() sendToTransactions = new EventEmitter<any>();
+  public title:string = 'myBank';
+  public transactionsArray: Array<any>;
+  public faSync = faSync;
+  public faBriefcase = faBriefcase;
+
+  constructor() {}
+
+  sendTransfer(arr){
+   this.transactionsArray = arr;
+  }
+
+  ngOnInit(): void {}
+
 }

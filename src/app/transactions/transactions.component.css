@@ -1,0 +1,30 @@
+.searchInput {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #ccc;
+    color: #999;
+    font-weight: 200;
+}
+.btn-sort {
+    font-size: .89rem;
+    text-transform: uppercase;
+    border: 1px solid #ccc;
+    background: white;
+    padding: .2rem 1.2rem;
+}
+.btn-sort.asc::after {
+    content: "\25B2";
+    color: #999;
+    font-size: 10px;
+    position: relative;
+    top: 0;
+    left: 5px;
+}
+.btn-sort.desc::after {
+    content: "\25BC";
+    color: #999;
+    font-size: 10px;
+    position: relative;
+    top: 0;
+    left: 5px;
+}
