@@ -1,10 +1,30 @@
-# MyBank
+# MyBank BackBase FE test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
+## Before start
+Make sure you have installed **npm** and **angular cli** if you don't, please check [Angular CLI Documentation](https://angular.io/cli)
 
-## Development server
+### Once you have the basics installed:
+In case yo download the project:
+* Unzip the **myBank.zip** file anywhere you want in your computer
+* Open a command terminal and navigate to your unzipped folder
+* Into the folder please run the following script `npm i` or `npm install` for npm look at the corresponding package.json file to install the dependencies.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In case you clone the project:
+* Open a command terminal and navigate to your project folder
+* Into the folder please run the following script `npm i` or `npm install` for npm look at the corresponding package.json file to install the dependencies.
+
+## Run the project
+
+Run `ng serve` for a dev server. Or run `ng serve --port=[port]`.
+
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Technology knowledge
+This app was made from scratch using only Angular features using ES6 & TypeSript.
+
+Using Boostrap 4 for saving time with some grid and classes develop, also modifying styles into general and components css.
+
+Also Using FontAwesome just to replace the provided PNG icons.
 
 ## Code scaffolding
 
